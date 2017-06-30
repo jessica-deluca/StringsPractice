@@ -113,7 +113,33 @@ namespace StringsPractice
             //    Console.WriteLine("The names are different.");
             //}
 
+            ////Console.WriteLine("Enter your first name.");
+            //string firstName = Console.ReadLine();
 
-    }
+            //Console.WriteLine("Enter your last name.");
+            //string lastName = Console.ReadLine();
+
+            //Console.WriteLine(firstName + " " + lastName); //using +, print user's full name including a space to separate the names
+
+            ////string fullName = string.Concat(firstName, " ", lastName); //using .Concat(), print user's full name including a space to separate the names
+            ////Console.WriteLine(fullName);
+
+            Console.WriteLine("Guess what type of pet I have. (Hint: It's the opposite of a dog.)");
+            string answer = Console.ReadLine();
+
+            string lower = answer.ToLower(); // converts user's answer to all lowercase so that if they enter cat or CAT, either answer will be correct
+
+            switch (lower)
+            {
+                case "cat": // "cat" is case senstive so we need to convert answer to all lowercase as shown above
+                    Console.WriteLine("You guessed correctly!");
+                    break;
+                default:
+                    Console.WriteLine("You guess incorrectly!");
+                    break;
+            }
+
+
+        }
     }
 }
